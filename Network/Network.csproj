@@ -38,6 +38,7 @@
     <Compile Include="Pong\Model\Paddle.cs" />
     <Compile Include="Pong\Model\Ball.cs" />
     <Compile Include="Pong\Model\Screen.cs" />
+    <Compile Include="Pong\Model\Vector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

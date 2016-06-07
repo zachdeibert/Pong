@@ -28,7 +28,9 @@ namespace Network {
 			}
 		}
 
-		public Paddle() {
+		public Paddle(ClientModel client) {
+			Mode = client.Mode;
+			Model = client;
 		}
 	}
 }
