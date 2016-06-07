@@ -39,11 +39,15 @@
     <Compile Include="Pong\Model\Ball.cs" />
     <Compile Include="Pong\Model\Screen.cs" />
     <Compile Include="Pong\Model\Vector.cs" />
+    <Compile Include="Pong\Network\NetworkClient.cs" />
+    <Compile Include="Pong\Network\Packets\IPacket.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Pong\" />
     <Folder Include="Pong\Model\" />
+    <Folder Include="Pong\Network\" />
+    <Folder Include="Pong\Network\Packets\" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
