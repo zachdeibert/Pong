@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Network;
 
 namespace Server {
@@ -14,6 +15,10 @@ namespace Server {
 				}
 			}
 			NetworkFactory.CreateServer(port, new GameModel());
+			Console.WriteLine("Server started on {0}:{1}", IPAddress.Any, port);
+			Console.WriteLine("Press any key to stop the server...");
+			Console.ReadKey(true);
+			Environment.Exit(0);
 		}
 	}
 }

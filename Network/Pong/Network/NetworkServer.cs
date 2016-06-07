@@ -104,6 +104,7 @@ namespace Network {
 			Clients = new List<TcpClient>();
 			Streams = new List<Stream>();
 			Listener = new TcpListener(IPAddress.Any, port);
+			Listener.Start();
 			fmt = new BinaryFormatter();
 			Thread thread = new Thread(AcceptingThread);
 			thread.Start();
