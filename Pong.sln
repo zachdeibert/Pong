@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Pong", "Pong\Pong.vbproj", "{66F0A8A3-CD32-4A6B-AEB6-C2F976C15461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network", "Network\Network.csproj", "{F21DB8C0-7F80-438D-A3B2-B8D437FC5B7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66F0A8A3-CD32-4A6B-AEB6-C2F976C15461}.Debug|x86.ActiveCfg = Debug|x86
+		{66F0A8A3-CD32-4A6B-AEB6-C2F976C15461}.Debug|x86.Build.0 = Debug|x86
+		{66F0A8A3-CD32-4A6B-AEB6-C2F976C15461}.Release|x86.ActiveCfg = Release|x86
+		{66F0A8A3-CD32-4A6B-AEB6-C2F976C15461}.Release|x86.Build.0 = Release|x86
+		{F21DB8C0-7F80-438D-A3B2-B8D437FC5B7A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F21DB8C0-7F80-438D-A3B2-B8D437FC5B7A}.Debug|x86.Build.0 = Debug|Any CPU
+		{F21DB8C0-7F80-438D-A3B2-B8D437FC5B7A}.Release|x86.ActiveCfg = Release|Any CPU
+		{F21DB8C0-7F80-438D-A3B2-B8D437FC5B7A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
