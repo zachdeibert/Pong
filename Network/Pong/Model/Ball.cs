@@ -22,6 +22,11 @@ namespace Network {
 			set;
 		}
 
+		public void Tick(decimal dt) {
+			Velocity += Acceleration * dt;
+			Location += Velocity * dt;
+		}
+
 		public Ball(GameModel model) {
 		}
 	}
