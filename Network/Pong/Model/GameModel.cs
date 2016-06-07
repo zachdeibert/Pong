@@ -24,7 +24,7 @@ namespace Network {
 		}
 
 		public void CreateBallAndPaddles() {
-			Clients = Clients.AsReadOnly();
+			//Clients = Clients.AsReadOnly();
 			LeftPaddle = new Paddle(Clients[0]);
 			RightPaddle = new Paddle(Clients[Clients.Count - 1]);
 			Balls.Add(new Ball(this));
