@@ -34,6 +34,7 @@ namespace Network {
 				Threads.Clear();
 				Clients.Clear();
 				Streams.Clear();
+				Disposed = true;
 			}
 		}
 

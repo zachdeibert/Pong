@@ -45,6 +45,7 @@
     <Compile Include="Pong\Network\Packets\UpdatePacket.cs" />
     <Compile Include="Pong\Network\Packets\PaddleMovePacket.cs" />
     <Compile Include="Pong\Network\NetworkServer.cs" />
+    <Compile Include="Pong\Network\NetworkFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -22,6 +22,7 @@ namespace Network {
 				Network.Close();
 				Client.Close();
 				Network.Dispose();
+				Disposed = true;
 			}
 		}
 
@@ -60,7 +61,7 @@ namespace Network {
 			}
 		}
 
-		public NetworkClient(IPAddress addr) {
+		public NetworkClient(IPEndPoint addr) {
 			Client = new TcpClient(addr);
 			Network = Client.GetStream();
 			fmt = new BinaryFormatter();
