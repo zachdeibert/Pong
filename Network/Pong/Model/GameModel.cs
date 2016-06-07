@@ -8,6 +8,21 @@ namespace Network {
 			set;
 		}
 
+		public Paddle LeftPaddle {
+			get;
+			set;
+		}
+
+		public Paddle RightPaddle {
+			get;
+			set;
+		}
+
+		public List<Ball> Balls {
+			get;
+			set;
+		}
+
 		public GameModel() {
 		}
 	}

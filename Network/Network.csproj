@@ -35,6 +35,9 @@
     <Compile Include="Pong\Model\ClientModel.cs" />
     <Compile Include="Pong\Model\ClientMode.cs" />
     <Compile Include="Pong\Model\GameModel.cs" />
+    <Compile Include="Pong\Model\Paddle.cs" />
+    <Compile Include="Pong\Model\Ball.cs" />
+    <Compile Include="Pong\Model\Screen.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
