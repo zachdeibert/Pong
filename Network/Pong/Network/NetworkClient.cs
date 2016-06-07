@@ -65,6 +65,7 @@ namespace Network {
 			Network = Client.GetStream();
 			fmt = new BinaryFormatter();
 			Thread = new Thread(ReadingThread);
+			Thread.Start();
 		}
 
 		~NetworkClient() {
