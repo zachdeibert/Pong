@@ -26,7 +26,8 @@ namespace Network {
 			}
 		}
 
-		public Screen() {
+		public Screen(ClientModel client) {
+			Client = client;
 		}
 	}
 }

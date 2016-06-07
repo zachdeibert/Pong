@@ -48,6 +48,7 @@
     <Compile Include="Pong\Network\NetworkFactory.cs" />
     <Compile Include="Pong\Network\ClientCode.cs" />
     <Compile Include="Pong\Network\ServerCode.cs" />
+    <Compile Include="Pong\Simulator\Simulator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -55,6 +56,7 @@
     <Folder Include="Pong\Model\" />
     <Folder Include="Pong\Network\" />
     <Folder Include="Pong\Network\Packets\" />
+    <Folder Include="Pong\Simulator\" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
