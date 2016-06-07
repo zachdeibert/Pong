@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace Network {
+	[Serializable]
 	public class Screen {
 		public ClientModel Client {
 			get;

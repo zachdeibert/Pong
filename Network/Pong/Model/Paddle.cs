@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace Network {
+	[Serializable]
 	public class Paddle {
 		private ClientMode _Mode;
 		private ClientModel _Model;

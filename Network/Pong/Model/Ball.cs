@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace Network {
+	[Serializable]
 	public class Ball {
 		public Screen Screen {
 			get;

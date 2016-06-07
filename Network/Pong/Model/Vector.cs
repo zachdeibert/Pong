@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace Network {
+	[Serializable]
 	public class Vector {
 		public decimal X {
 			get;

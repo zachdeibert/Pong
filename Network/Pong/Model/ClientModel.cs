@@ -2,6 +2,7 @@
 using System.Net;
 
 namespace Network {
+	[Serializable]
 	public class ClientModel {
 		public IPAddress IP {
 			get;

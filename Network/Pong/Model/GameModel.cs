@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 namespace Network {
+	[Serializable]
 	public class GameModel {
 		public List<ClientModel> Clients {
 			get;
