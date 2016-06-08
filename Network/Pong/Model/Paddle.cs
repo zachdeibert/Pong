@@ -5,6 +5,8 @@ namespace Network {
 	public class Paddle {
 		private ClientMode _Mode;
 		private ClientModel _Model;
+		private decimal _Y;
+		private decimal _Height;
 
 		public ClientMode Mode {
 			get {
@@ -30,9 +32,34 @@ namespace Network {
 			}
 		}
 
+		public decimal Y {
+			get {
+				return _Y;
+			}
+			set {
+				if (value < 0) {
+					value = 0;
+				} else if (value > 1) {
+					value = 1;
+				}
+				_Y = value;
+			}
+		}
+
+		public decimal Height {
+			get {
+				return _Height;
+			}
+			set {
+				_Height = value;
+			}
+		}
+
 		public Paddle(ClientModel client) {
 			Mode = client.Mode;
 			Model = client;
+			Y = 0.5m;
+			Height = 0.15m;
 		}
 	}
 }

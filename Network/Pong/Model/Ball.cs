@@ -8,6 +8,7 @@ namespace Network {
 		private const decimal OverAcceleration = 1;
 		private static readonly Random RNG = new Random();
 		private readonly GameModel Game;
+		private decimal _Size;
 
 		public Screen Screen;
 
@@ -16,6 +17,15 @@ namespace Network {
 		public Vector Velocity;
 
 		public decimal AngularAcceleration;
+
+		public decimal Size {
+			get {
+				return _Size;
+			}
+			set {
+				_Size = value;
+			}
+		}
 
 		private bool HasOverAcceleration {
 			get {
@@ -62,6 +72,7 @@ namespace Network {
 			Location = new Vector(0.5m, 0.5m);
 			Velocity = new Vector((((decimal) RNG.NextDouble()) * 2m - 1m) * VelocityScale, (((decimal) RNG.NextDouble()) * 2m - 1m) * VelocityScale);
 			AngularAcceleration = ((decimal) RNG.NextDouble()) * AccelerationScale;
+			Size = 0.1m;
 		}
 	}
 }
