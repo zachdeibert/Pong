@@ -26,6 +26,7 @@ namespace Network {
 				if (_Mode != value.Mode) {
 					throw new ArgumentException("Invalid client for this type of paddle");
 				}
+				_Model = value;
 			}
 		}
 

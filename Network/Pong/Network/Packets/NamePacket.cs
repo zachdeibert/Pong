@@ -4,10 +4,7 @@ namespace Network {
 	public class NamePacket : IPacket {
 		private ClientMode _Side;
 
-		public string Name {
-			get;
-			set;
-		}
+		public string Name;
 
 		public ClientMode Side {
 			get {

@@ -4,10 +4,7 @@ using System.Net;
 namespace Network {
 	[Serializable]
 	public class ClientModel {
-		public IPAddress IP {
-			get;
-			set;
-		}
+		public IPAddress IP;
 
 		public ClientMode Mode {
 			get {
@@ -21,15 +18,10 @@ namespace Network {
 			}
 		}
 
-		public int Location {
-			get;
-			set;
-		}
+		public int Location;
 
-		public GameModel Game {
-			get;
-			set;
-		}
+		[NonSerialized]
+		public GameModel Game;
 
 		public ClientModel() {
 		}

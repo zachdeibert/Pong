@@ -3,15 +3,9 @@
 namespace Network {
 	[Serializable]
 	public class Player {
-		public string Name {
-			get;
-			set;
-		}
+		public string Name;
 
-		public int Score {
-			get;
-			set;
-		}
+		public int Score;
 
 		public Player() {
 		}

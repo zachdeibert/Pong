@@ -9,25 +9,13 @@ namespace Network {
 		private static readonly Random RNG = new Random();
 		private readonly GameModel Game;
 
-		public Screen Screen {
-			get;
-			set;
-		}
+		public Screen Screen;
 
-		public Vector Location {
-			get;
-			set;
-		}
+		public Vector Location;
 
-		public Vector Velocity {
-			get;
-			set;
-		}
+		public Vector Velocity;
 
-		public decimal AngularAcceleration {
-			get;
-			set;
-		}
+		public decimal AngularAcceleration;
 
 		private bool HasOverAcceleration {
 			get {
