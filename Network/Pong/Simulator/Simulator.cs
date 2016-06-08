@@ -5,6 +5,7 @@ namespace Network {
 	public class Simulator {
 		private const decimal InverseSpeed = 1000;
 		private readonly GameModel Game;
+		private readonly NetworkServer Server;
 		private readonly Thread Thread;
 
 		private void Run() {
@@ -16,6 +17,7 @@ namespace Network {
 				lastFrame = frame;
 				long ticks = diff.Ticks;
 				Game.Balls.ForEach(b => b.Tick(((decimal) ticks) / InverseSpeed));
+				Server.SendPacket(new UpdatePacket(Game));
 			}
 		}
 
@@ -23,8 +25,9 @@ namespace Network {
 			Thread.Interrupt();
 		}
 
-		public Simulator(GameModel game) {
+		public Simulator(GameModel game, NetworkServer server) {
 			Game = game;
+			Server = server;
 			Thread = new Thread(Run);
 			Thread.Start();
 		}

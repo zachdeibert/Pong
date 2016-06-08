@@ -4,6 +4,7 @@ using System.Linq;
 namespace Network {
 	internal class ServerCode {
 		private readonly GameModel Game;
+		private readonly NetworkServer Server;
 		private Simulator Simulator;
 
 		public bool IsContinuous {
@@ -23,7 +24,7 @@ namespace Network {
 						Simulator.Stop();
 					}
 				} else if (IsContinuous) {
-					Simulator = new Simulator(Game);
+					Simulator = new Simulator(Game, Server);
 				}
 			} else if (raw is PaddleMovePacket) {
 				PaddleMovePacket pkt = (PaddleMovePacket) raw;
@@ -35,8 +36,9 @@ namespace Network {
 			}
 		}
 
-		public ServerCode(GameModel game) {
+		public ServerCode(GameModel game, NetworkServer server) {
 			Game = game;
+			Server = server;
 		}
 	}
 }

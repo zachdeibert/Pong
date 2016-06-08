@@ -44,28 +44,38 @@ namespace Network {
 				if (Screen.HasMoreLeft) {
 					Screen = new Screen(Game.Clients[Screen.X - 1]);
 					Location.X += 1;
-				} else {
+				} else if (Game.LeftPaddle.Y + Game.LeftPaddle.Height / 2 >= Location.Y && Game.LeftPaddle.Y - Game.LeftPaddle.Height / 2 <= Location.Y) {
 					Velocity.X *= -1;
 					Location.X = Size / 2;
+				} else {
+					++Game.RightPlayer.Score;
+					Reset();
 				}
 			} else if (Location.X > 1 - Size / 2) {
 				if (Screen.HasMoreRight) {
 					Screen = new Screen(Game.Clients[Screen.X + 1]);
 					Location.X -= 1;
-				} else {
+				} else if (Game.RightPaddle.Y + Game.RightPaddle.Height / 2 >= Location.Y && Game.RightPaddle.Y - Game.RightPaddle.Height / 2 <= Location.Y) {
 					Velocity.X *= -1;
 					Location.X = 1 - Size / 2;
+				} else {
+					++Game.LeftPlayer.Score;
+					Reset();
 				}
 			}
 		}
 
-		public Ball(GameModel model) {
-			Game = model;
-			Screen = new Screen(model.Clients[model.Clients.Count / 2]);
+		public void Reset() {
+			Screen = new Screen(Game.Clients[Game.Clients.Count / 2]);
 			Location = new Vector(0.5m, 0.5m);
 			Velocity = new Vector((((decimal) RNG.NextDouble()) * 2m - 1m) * VelocityScale, (((decimal) RNG.NextDouble()) * 2m - 1m) * VelocityScale);
 			AngularAcceleration = ((decimal) RNG.NextDouble()) * AccelerationScale;
 			Size = 0.1m;
+		}
+
+		public Ball(GameModel model) {
+			Game = model;
+			Reset();
 		}
 	}
 }

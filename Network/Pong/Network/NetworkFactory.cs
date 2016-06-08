@@ -20,7 +20,7 @@ namespace Network {
 
 		public static NetworkServer CreateServer(int port, GameModel game) {
 			NetworkServer server = new NetworkServer(port);
-			server.PacketReceived += new ServerCode(game).OnPacketReceived;
+			server.PacketReceived += new ServerCode(game, server).OnPacketReceived;
 			return server;
 		}
 	}
