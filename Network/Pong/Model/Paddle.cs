@@ -37,10 +37,10 @@ namespace Network {
 				return _Y;
 			}
 			set {
-				if (value < 0) {
-					value = 0;
-				} else if (value > 1) {
-					value = 1;
+				if (value < Height / 2) {
+					value = Height / 2;
+				} else if (value > 1 - Height / 2) {
+					value = 1 - Height / 2;
 				}
 				_Y = value;
 			}
@@ -51,7 +51,13 @@ namespace Network {
 				return _Height;
 			}
 			set {
+				if (value <= 0) {
+					value = (decimal) double.Epsilon;
+				} else if (value >= 1) {
+					value = 1 - (decimal) double.Epsilon;
+				}
 				_Height = value;
+				Y = Y;
 			}
 		}
 

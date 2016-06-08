@@ -18,14 +18,7 @@ namespace Network {
 
 		public decimal AngularAcceleration;
 
-		public decimal Size {
-			get {
-				return _Size;
-			}
-			set {
-				_Size = value;
-			}
-		}
+		public decimal Size;
 
 		private bool HasOverAcceleration {
 			get {
@@ -40,28 +33,28 @@ namespace Network {
 				Game.Balls.Add(new Ball(Game));
 			}
 			Location += Velocity * dt;
-			if (Location.Y < 0) {
+			if (Location.Y < Size / 2) {
 				Velocity.Y *= -1;
-				Location.Y = 0;
-			} else if (Location.Y > 1) {
+				Location.Y = Size / 2;
+			} else if (Location.Y > 1 - Size / 2) {
 				Velocity.Y *= -1;
-				Location.Y = 1;
+				Location.Y = 1 - Size / 2;
 			}
-			if (Location.X < 0) {
+			if (Location.X < Size / 2) {
 				if (Screen.HasMoreLeft) {
 					Screen = new Screen(Game.Clients[Screen.X - 1]);
 					Location.X += 1;
 				} else {
 					Velocity.X *= -1;
-					Location.X = 0;
+					Location.X = Size / 2;
 				}
-			} else if (Location.X > 1) {
+			} else if (Location.X > 1 - Size / 2) {
 				if (Screen.HasMoreRight) {
 					Screen = new Screen(Game.Clients[Screen.X + 1]);
 					Location.X -= 1;
 				} else {
 					Velocity.X *= -1;
-					Location.X = 1;
+					Location.X = 1 - Size / 2;
 				}
 			}
 		}
