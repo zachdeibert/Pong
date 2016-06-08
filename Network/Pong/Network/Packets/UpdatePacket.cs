@@ -4,30 +4,15 @@ using System.Collections.Generic;
 namespace Network {
 	[Serializable]
 	public class UpdatePacket : IPacket {
-		public List<Ball> Balls {
-			get;
-			set;
-		}
+		public List<Ball> Balls;
 
-		public Paddle LeftPaddle {
-			get;
-			set;
-		}
+		public Paddle LeftPaddle;
 
-		public Paddle RightPaddle {
-			get;
-			set;
-		}
+		public Paddle RightPaddle;
 
-		public Player LeftPlayer {
-			get;
-			set;
-		}
+		public Player LeftPlayer;
 
-		public Player RightPlayer {
-			get;
-			set;
-		}
+		public Player RightPlayer;
 
 		public UpdatePacket(GameModel model) {
 			Balls = model.Balls;
