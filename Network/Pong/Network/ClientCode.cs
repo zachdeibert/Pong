@@ -13,6 +13,8 @@ namespace Network {
 				Game.Balls = pkt.Balls;
 				Game.LeftPaddle = pkt.LeftPaddle;
 				Game.RightPaddle = pkt.RightPaddle;
+				Game.LeftPlayer = pkt.LeftPlayer;
+				Game.RightPlayer = pkt.RightPlayer;
 			}
 		}
 

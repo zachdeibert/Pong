@@ -9,6 +9,15 @@ namespace Network {
 			return client;
 		}
 
+		public static void ConnectClient(NetworkClient client, int location, string name = null) {
+			ClientModel c = new ClientModel();
+			c.Location = location;
+			client.SendPacket(new ConnectPacket(c));
+			if (name != null) {
+				client.SendPacket(new NamePacket(name, c.Mode));
+			}
+		}
+
 		public static NetworkServer CreateServer(int port, GameModel game) {
 			NetworkServer server = new NetworkServer(port);
 			server.PacketReceived += new ServerCode(game).OnPacketReceived;

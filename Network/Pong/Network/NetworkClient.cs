@@ -9,7 +9,7 @@ namespace Network {
 	public class NetworkClient : IDisposable {
 		public event Action<IPacket> PacketReceived;
 		public event Action<IOException> Errored;
-		private readonly TcpClient Client;
+		internal readonly TcpClient Client;
 		private readonly Stream Network;
 		private readonly Thread Thread;
 		private readonly BinaryFormatter fmt;

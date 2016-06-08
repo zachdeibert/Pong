@@ -24,6 +24,16 @@ namespace Network {
 			set;
 		}
 
+		public Player LeftPlayer {
+			get;
+			set;
+		}
+
+		public Player RightPlayer {
+			get;
+			set;
+		}
+
 		public void CreateBallAndPaddles() {
 			//Clients = Clients.AsReadOnly();
 			LeftPaddle = new Paddle(Clients[0]);

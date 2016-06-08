@@ -19,10 +19,22 @@ namespace Network {
 			set;
 		}
 
+		public Player LeftPlayer {
+			get;
+			set;
+		}
+
+		public Player RightPlayer {
+			get;
+			set;
+		}
+
 		public UpdatePacket(GameModel model) {
 			Balls = model.Balls;
 			LeftPaddle = model.LeftPaddle;
 			RightPaddle = model.RightPaddle;
+			LeftPlayer = model.LeftPlayer;
+			RightPlayer = model.RightPlayer;
 		}
 	}
 }

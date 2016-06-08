@@ -49,6 +49,8 @@
     <Compile Include="Pong\Network\ClientCode.cs" />
     <Compile Include="Pong\Network\ServerCode.cs" />
     <Compile Include="Pong\Simulator\Simulator.cs" />
+    <Compile Include="Pong\Model\Player.cs" />
+    <Compile Include="Pong\Network\Packets\NamePacket.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
