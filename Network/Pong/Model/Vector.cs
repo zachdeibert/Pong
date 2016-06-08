@@ -3,15 +3,9 @@
 namespace Network {
 	[Serializable]
 	public class Vector {
-		public decimal X {
-			get;
-			set;
-		}
+		public decimal X;
 
-		public decimal Y {
-			get;
-			set;
-		}
+		public decimal Y;
 
 		public static Vector operator +(Vector a, Vector b) {
 			return new Vector(a.X + b.X, a.Y + b.Y);

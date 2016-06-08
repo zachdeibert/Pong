@@ -3,10 +3,7 @@
 namespace Network {
 	[Serializable]
 	public class Screen {
-		public ClientModel Client {
-			get;
-			set;
-		}
+		public ClientModel Client;
 
 		public int X {
 			get {

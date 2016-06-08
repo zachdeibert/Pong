@@ -4,38 +4,19 @@ using System.Collections.Generic;
 namespace Network {
 	[Serializable]
 	public class GameModel {
-		public List<ClientModel> Clients {
-			get;
-			set;
-		}
+		public List<ClientModel> Clients;
 
-		public Paddle LeftPaddle {
-			get;
-			set;
-		}
+		public Paddle LeftPaddle;
 
-		public Paddle RightPaddle {
-			get;
-			set;
-		}
+		public Paddle RightPaddle;
 
-		public List<Ball> Balls {
-			get;
-			set;
-		}
+		public List<Ball> Balls;
 
-		public Player LeftPlayer {
-			get;
-			set;
-		}
+		public Player LeftPlayer;
 
-		public Player RightPlayer {
-			get;
-			set;
-		}
+		public Player RightPlayer;
 
 		public void CreateBallAndPaddles() {
-			//Clients = Clients.AsReadOnly();
 			LeftPaddle = new Paddle(Clients[0]);
 			RightPaddle = new Paddle(Clients[Clients.Count - 1]);
 			Balls.Add(new Ball(this));

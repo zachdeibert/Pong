@@ -15,6 +15,7 @@ namespace Network {
 		public void OnPacketReceived(IPacket raw) {
 			if (raw is ConnectPacket) {
 				ConnectPacket pkt = (ConnectPacket) raw;
+				pkt.Client.Game = Game;
 				bool before = IsContinuous;
 				Game.Clients.Add(pkt.Client);
 				if (before) {
