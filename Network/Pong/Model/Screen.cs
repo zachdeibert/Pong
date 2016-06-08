@@ -23,6 +23,14 @@ namespace Network {
 			}
 		}
 
+		public override bool Equals(object obj) {
+			if (obj is Screen) {
+				Screen s = (Screen) obj;
+				return X == s.X;
+			}
+			return false;
+		}
+
 		public Screen(ClientModel client) {
 			Client = client;
 		}
